@@ -1,0 +1,15 @@
+current directory: /Users/gespino/Desktop/Workspace/Misc/competency-matrix/bundle/gems/bindex-0.5.0/ext/bindex
+/Users/gespino/.rvm/rubies/ruby-2.3.1/bin/ruby -r ./siteconf20170919-32746-16jxvo1.rb extconf.rb
+creating Makefile
+
+current directory: /Users/gespino/Desktop/Workspace/Misc/competency-matrix/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /Users/gespino/Desktop/Workspace/Misc/competency-matrix/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.bundle
+
+current directory: /Users/gespino/Desktop/Workspace/Misc/competency-matrix/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20170919-32746-9s9c5x/bindex

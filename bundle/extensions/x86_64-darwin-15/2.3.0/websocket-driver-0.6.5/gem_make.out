@@ -1,0 +1,15 @@
+current directory: /Users/gespino/Desktop/Workspace/Misc/competency-matrix/bundle/gems/websocket-driver-0.6.5/ext/websocket-driver
+/Users/gespino/.rvm/rubies/ruby-2.3.1/bin/ruby -r ./siteconf20170919-32746-1v39cld.rb extconf.rb
+creating Makefile
+
+current directory: /Users/gespino/Desktop/Workspace/Misc/competency-matrix/bundle/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/gespino/Desktop/Workspace/Misc/competency-matrix/bundle/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/gespino/Desktop/Workspace/Misc/competency-matrix/bundle/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20170919-32746-1djfsje
