@@ -1,4 +1,6 @@
 class MatricesController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     @matrices = [javascript_matrix]
   end
