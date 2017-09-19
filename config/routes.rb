@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root 'static#home'
+  root 'matrices#new'
+
+  resources :matrices
 end
