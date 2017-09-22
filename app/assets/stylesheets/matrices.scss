@@ -1,0 +1,31 @@
+.table-box {
+  padding: 1.5rem;
+  border: solid #f7f7f9;
+  border-width: .2rem;
+}
+
+.competency {
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #d2faff;
+}
+
+.nav-item {
+  margin-bottom: -2px !important;
+  margin-right: -2px !important;
+
+  &:last-child {
+    margin-right: 0px !important;
+  }
+}
+
+.nav-link {
+  border-width: .1rem !important;
+  border-color: #e9ecef !important;
+}
+
+.tab-content {
+  border-width: .1rem !important;
+}
