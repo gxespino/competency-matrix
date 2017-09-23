@@ -13,6 +13,10 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails'
+
+# Styles
+gem 'bootstrap', '~> 4.0.0.beta'
 
 # Authentication
 gem 'devise'

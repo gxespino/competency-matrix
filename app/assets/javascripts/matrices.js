@@ -1,8 +1,12 @@
 function selectCompetency(event) {
   var competency = event.target
 
-  clearParentRow(competency)
-  select(competency)
+  if (competency.classList.contains('selected')) {
+    unselect(competency)
+  } else {
+    clearParentRow(competency)
+    select(competency)
+  }
 }
 
 function clearParentRow(competency) {
