@@ -1,24 +1,40 @@
-# README
+# Competency Matrix
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Competency Matrix is a simple Rails app that enables users to track their programming competencies and for managers to analyze their team's improvement over time.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+Clone the repo:
 
-* System dependencies
+```bash
+$ git clone https://github.com/gxespino/competency-matrix.git
+```
 
-* Configuration
+Move into the directory and install the dependencies:
 
-* Database creation
+```bash
+$ cd competency-matrix
+$ bundle install
+```
 
-* Database initialization
+Create and migrate the database:
 
-* How to run the test suite
+```
+$ rake db:setup
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Start the server:
 
-* Deployment instructions
+```bash
+$ rails server
+```
 
-* ...
+Visit the app at [localhost:3000](http://localhost:3000)
+
+## Usage
+
+Team members can register using their email and then fill out the competency matrices.
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/gxespino/competency-matrix.
