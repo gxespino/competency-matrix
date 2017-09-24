@@ -1,14 +1,14 @@
 <!-- Page Content -->
 <div class="container">
-  <div class="col-lg-12 text-center">
+  <div class="col-lg-12 text-center mb-5">
     <h1 class="mt-5">Competency Matrix</h1>
     <p class="lead">Track your competencies so you can improve them!</p>
   </div>
 
   <ul class="nav nav-tabs justify-content-end border-light border-bottom-0" id="myTab" role="tablist">
     <% @matrices.each do |matrix| %>
-      <li class="nav-item">
-        <a class="nav-link active"
+      <li class="nav-item <%= 'active' if matrix.title == 'Javascript' %>">
+        <a class="nav-link"
            id="<%= matrix.title %>-tab"
            data-toggle="tab"
            href="#<%= matrix.title %>"
@@ -18,15 +18,12 @@
            <%= matrix.title %>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Ruby</a>
-      </li>
     <% end %>
   </ul>
 
   <div class="tab-content p-4 border" id="myTabContent">
     <% @matrices.each do |matrix| %>
-      <div class="tab-pane fade show active" id="<%= matrix.title %>" role="tabpanel" aria-labelledby="<%= matrix.title %>-tab">
+      <div class="tab-pane fade show <%= 'active' if matrix.title == 'Javascript' %>" id="<%= matrix.title %>" role="tabpanel" aria-labelledby="<%= matrix.title %>-tab">
         <div class="col-lg-12 mx-auto">
           <table class="table">
             <h3 class="text-center mb-4"><%= matrix.title %></h2>
@@ -40,10 +37,9 @@
             <tbody>
               <% matrix.competencies.each do |competency| %>
                 <tr>
-                  <th scope="row"><%= competency.title %></th>
                   <% competency.levels.each do |level| %>
                     <td class="competency" onclick="selectCompetency(event)">
-                      <%= level %>
+                      <%= level.html_safe %>
                     </td>
                   <% end %>
                 </tr>
@@ -53,9 +49,5 @@
         </div>
       </div>
     <% end %>
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-      Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
-
-    </div>
   </div>
 </div>
