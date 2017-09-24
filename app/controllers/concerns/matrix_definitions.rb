@@ -46,10 +46,12 @@ module MatrixDefinitions
   def apprentice
     <<~HTML
       <dl>
-        <dt>Description list</dt>
-        <dd>A description of the competency is what is needed here</dd>
-        <dt>Object Oriented Programming</dt>
-        <dd>This is what is required to know OOP</dd>
+        <dt>Syntax</dt>
+        <dd>Knows how to write the basic elements of the language like loops, classes, conditional statements, modules etc.</dd>
+        <dt>Problem Decomposition</dt>
+        <dd>Can break down basic bugs and identify steps/resources needed to fix them</dd>
+        <dt>Summary</dt>
+        <dd>Displays enthusiasm and a willingness to learn. Embraces an "I don't know" approach and actively seeks help when stuck. Communicates problems well both verbally and in writing. Has identified a tangible plan to improve.</dd>
       </dl>
     HTML
   end
@@ -57,10 +59,12 @@ module MatrixDefinitions
   def competent
     <<~HTML
       <dl>
-        <dt>Description list</dt>
-        <dd>A description of the competency is what is needed here</dd>
-        <dt>Object Oriented Programming</dt>
-        <dd>This is what is required to know OOP</dd>
+        <dt>Testing</dt>
+        <dd>Proactively writes automated tests and identifies good unit tests for the code they are writing.</dd>
+        <dt>OOP/Functional paradigms</dt>
+        <dd>Aware of object oriented programming and functional programming paradigms but identifying when and how they should be used doesn't come naturally, yet.</dd>
+        <dt>Summary</dt>
+        <dd>Can take a mid sized story and take the lead in it's completion. The end result is a working feature with some test coverage. A competent developer may not have considered future maintainability/extensibility.</dd>
       </dl>
     HTML
   end
@@ -68,10 +72,12 @@ module MatrixDefinitions
   def advanced
     <<~HTML
       <dl>
-        <dt>Description list</dt>
-        <dd>A description of the competency is what is needed here</dd>
-        <dt>Object Oriented Programming</dt>
-        <dd>This is what is required to know OOP</dd>
+        <dt>Testing</dt>
+        <dd>Knows what type of test to write per scenario (acceptance vs integration vs unit) and consistently writes coverage for error scenarios.</dd>
+        <dt>Design Patterns</dt>
+        <dd></dd>
+        <dt>Summary</dt>
+        <dd></dd>
       </dl>
     HTML
   end
@@ -79,10 +85,12 @@ module MatrixDefinitions
   def expert
     <<~HTML
       <dl>
-        <dt>Description list</dt>
-        <dd>A description of the competency is what is needed here</dd>
-        <dt>Object Oriented Programming</dt>
-        <dd>This is what is required to know OOP</dd>
+        <dt>Testing</dt>
+        <dd>Knows what type of test to write per scenario (acceptance vs integration vs unit) and consistently writes coverage for error scenarios.</dd>
+        <dt>Design Patterns</dt>
+        <dd></dd>
+        <dt>Summary</dt>
+        <dd></dd>
       </dl>
     HTML
   end

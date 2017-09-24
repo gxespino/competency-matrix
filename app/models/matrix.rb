@@ -1,5 +1,5 @@
 class Matrix
-  BASE_HEADERS = ['Beginner', 'Competent', 'Senior', 'Expert'].freeze
+  BASE_HEADERS = ['Apprentice', 'Competent', 'Advanced', 'Expert'].freeze
 
   attr_accessor :title, :headers, :competencies
 
