@@ -15,6 +15,8 @@ function selectCompetency(event) {
     select(competency, 'working')
     setParentRow(competency)
   }
+
+  setProgressBar(competency)
 }
 
 function clearParentRow(competency) {
@@ -55,6 +57,33 @@ function setParentRow(competency) {
       unselect(cellsArray[i], 'completed');
     }
   }
+}
+
+function setProgressBar(competency) {
+  var progressBar    = document.getElementById('progress-bar')
+  var parentRowCells = competency.parentElement.cells
+  var cellsArray     = []
+
+  // Convert parentRowCells object to Array
+  for (var i = 0, len = parentRowCells.length; i < len; i++) {
+    cellsArray.push(parentRowCells[i])
+  }
+
+  for (var i = 0, len = cellsArray.length; i < len; i++) {
+    var competencyIndex   = cellsArray.indexOf(competency) + 1
+    var workingCompetency = competency.classList.contains('working')
+    var newValue          = (competencyIndex * 25)
+
+    if (workingCompetency) newValue = newValue - 12.5
+
+    updateProgressBarValues(progressBar, newValue);
+  }
+}
+
+function updateProgressBarValues(progressBar, value) {
+  progressBar.setAttribute('style', 'width: ' + value + '%')
+  progressBar.setAttribute('aria-valuenow', value)
+  progressBar.innerText = value + '%'
 }
 
 function select(element, tdClass) {
