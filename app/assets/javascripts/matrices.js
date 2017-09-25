@@ -60,7 +60,22 @@ function setParentRow(competency) {
 }
 
 function setProgressBar(competency) {
-  var progressBar    = document.getElementById('progress-bar')
+  var parentDiv   = competency.closest('div')
+  var progressBar = null
+
+  // Find closest progress-bar div
+  for (var i = 0; i < parentDiv.childNodes.length; i++) {
+    var node = parentDiv.childNodes[i]
+
+    if (node && node.classList) {
+      if (node.classList.contains('progress-div')) {
+        // TODO: This is bad!
+        progressBar = parentDiv.childNodes[i].childNodes[1].childNodes[1]
+        break;
+      }
+    }
+  }
+
   var parentRowCells = competency.parentElement.cells
   var cellsArray     = []
 

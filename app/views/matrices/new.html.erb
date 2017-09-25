@@ -27,14 +27,12 @@
         <div class="row">
           <div class="col-lg-12 mx-auto">
             <table class="table">
-              <h3 class="text-center mb-4">
-                <%= matrix.title %>
-                <div class="col-lg-6 mx-auto">
-                  <div class="progress mt-3">
-                    <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="progress-bar">0%</div>
-                  </div>
+              <h3 class="text-center mb-4"><%= matrix.title %></h3>
+              <div class="col-lg-6 mx-auto progress-div">
+                <div class="progress mb-4">
+                  <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="progress-bar">0%</div>
                 </div>
-              </h3>
+              </div>
               <thead class="thead-default">
                 <tr>
                   <% matrix.headers.each do |header| %>
