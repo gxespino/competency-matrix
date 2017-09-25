@@ -8,8 +8,12 @@
   cursor: pointer;
 }
 
-.selected {
-  background-color: #80e096;
+.working {
+  background-color: #d8f5df;
+}
+
+.completed {
+  background-color: #3db959;
 }
 
 .nav-item {
