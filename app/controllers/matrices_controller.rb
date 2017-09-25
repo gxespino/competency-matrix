@@ -7,7 +7,6 @@ class MatricesController < ApplicationController
       javascript_matrix,
       ruby_matrix,
       java_matrix,
-      css_matrix,
       react_matrix
     ]
   end
