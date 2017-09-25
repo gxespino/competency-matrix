@@ -24,3 +24,18 @@ function select(element) {
 function unselect(element) {
   element.classList.remove('selected')
 }
+
+document.addEventListener("DOMContentLoaded", function(){
+  [].forEach.call(document.querySelectorAll('dl', 'dt', 'dd', 'competency-text'), function(el) {
+    el.addEventListener('click', function(event) {
+      event.stopPropagation()
+      var competency = event.target.parentNode.parentNode
+      var event = new MouseEvent('click', {
+        bubbles: true,
+        cancelable: false
+      })
+
+      competency.dispatchEvent(event)
+    })
+  })
+})
