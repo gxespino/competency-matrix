@@ -21,31 +21,40 @@
     <% end %>
   </ul>
 
-  <div class="tab-content p-4 border" id="myTabContent">
+  <div class="tab-content p-4 border">
     <% @matrices.each do |matrix| %>
       <div class="tab-pane fade show <%= 'active' if matrix.title == 'Javascript' %>" id="<%= matrix.title %>" role="tabpanel" aria-labelledby="<%= matrix.title %>-tab">
-        <div class="col-lg-12 mx-auto">
-          <table class="table">
-            <h3 class="text-center mb-4"><%= matrix.title %></h2>
-            <thead class="thead-default">
-              <tr>
-                <% matrix.headers.each do |header| %>
-                  <th><%= header %></th>
-                <% end %>
-              </tr>
-            </thead>
-            <tbody>
-              <% matrix.competencies.each do |competency| %>
+        <div class="row">
+          <div class="col-lg-12 mx-auto">
+            <table class="table">
+              <h3 class="text-center mb-4"><%= matrix.title %></h3>
+              <div class="col-lg-6 mx-auto progress-div">
+                <div class="progress mb-4">
+                  <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="progress-bar">0%</div>
+                </div>
+              </div>
+              <thead class="thead-default">
                 <tr>
-                  <% competency.levels.each do |level| %>
-                    <td class="competency" onclick="selectCompetency(event)">
-                      <%= level.html_safe %>
-                    </td>
+                  <% matrix.headers.each do |header| %>
+                    <th>
+                      <%= header %>
+                    </th>
                   <% end %>
                 </tr>
-              <% end %>
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                <% matrix.competencies.each do |competency| %>
+                  <tr>
+                    <% competency.levels.each do |level| %>
+                      <td class="competency" onclick="selectCompetency(event)">
+                        <%= level.html_safe %>
+                      </td>
+                    <% end %>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     <% end %>

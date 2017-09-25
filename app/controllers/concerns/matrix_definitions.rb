@@ -27,6 +27,13 @@ module MatrixDefinitions
     )
   end
 
+  def devops_matrix
+    Matrix.new(
+      title: 'DevOps',
+      competencies: [overall]
+    )
+  end
+
   private
 
   def overall
