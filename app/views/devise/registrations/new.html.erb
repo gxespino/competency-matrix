@@ -1,4 +1,6 @@
 <div class="col-lg-3 mx-auto mt-5 mb-3 p-5 bg-light">
+  <%= render 'flash' %>
+
   <h3 class="text-center mb-5">Register</h2>
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <div class="form-group">
