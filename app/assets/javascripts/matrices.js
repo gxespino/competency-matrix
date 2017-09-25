@@ -99,6 +99,18 @@ function updateProgressBarValues(progressBar, value) {
   progressBar.setAttribute('style', 'width: ' + value + '%')
   progressBar.setAttribute('aria-valuenow', value)
   progressBar.innerText = value + '%'
+
+  var confettiElements = document.getElementsByClassName('confetti-piece')
+
+  if (value === 100) {
+    Array.prototype.forEach.call(confettiElements, function (el) {
+      el.style.display='block'
+    });
+  } else {
+    Array.prototype.forEach.call(confettiElements, function (el) {
+      el.style.display='none'
+    });
+  }
 }
 
 function select(element, tdClass) {

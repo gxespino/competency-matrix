@@ -8,9 +8,9 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <%= render partial: 'layouts/navbar' %>
-
-    <%= yield %>
-
+    <div class='wrapper'>
+      <%= render partial: 'layouts/navbar' %>
+      <%= yield %>
+    </div>
   </body>
 </html>
