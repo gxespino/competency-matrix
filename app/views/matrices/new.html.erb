@@ -22,7 +22,7 @@
     <% end %>
   </ul>
 
-  <div class="tab-content p-4 border">
+  <div class="tab-content p-4 border" data-matrices="<%= @matrices.to_json %>" id="matrix-content">
     <% @matrices.each do |matrix| %>
       <div class="tab-pane fade show <%= 'active' if matrix.title == 'Javascript' %>" id="<%= matrix.title %>" role="tabpanel" aria-labelledby="<%= matrix.title %>-tab">
         <div class="row">
@@ -69,3 +69,6 @@
     <% end %>
   </div>
 </div>
+<script type="text/javascript">
+  loadCompetencies(<%= current_user.record.id %>);
+</script>

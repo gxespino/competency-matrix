@@ -121,8 +121,8 @@ function unselect(element, tdClass) {
   element.classList.remove(tdClass)
 }
 
-// Allow dl, dt, dd & competency-text classes to be clickable
 document.addEventListener("DOMContentLoaded", function(){
+  // Allow dl, dt, dd & competency-text classes to be clickable
   [].forEach.call(document.querySelectorAll('dl', 'dt', 'dd', 'competency-text'), function(el) {
     el.addEventListener('click', function(event) {
       event.stopPropagation()
@@ -136,3 +136,24 @@ document.addEventListener("DOMContentLoaded", function(){
     })
   })
 })
+
+function loadCompetencies(recordId) {
+  // Load competencies
+  var dataDiv  = document.getElementById('matrix-content')
+  var matrices = JSON.parse(dataDiv.attributes['data-matrices'].value)
+
+  // [js, ruby, java, react, devops]
+  $.ajax({
+    type: "PUT",
+    url: "/records/" + recordId,
+    data: {
+      record: {
+        data: 'WTF!!!!'
+      }
+    },
+    success: function(data) {
+      console.log(data)
+      console.log('GOT HERE')
+    }
+  })
+}
