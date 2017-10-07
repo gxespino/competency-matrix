@@ -1,17 +1,19 @@
 function updateCompetencyRecord(target) {
-  // $.ajax({
-  //   url: '/competency_records',
-  //   type: 'POST',
-  //   data: { id: e.target.id, checked: e.target.checked }
-  // })
+  var userId          = target.getAttribute('data-user-id')
+  var competencyName  = target.getAttribute('data-competency-name')
+  var competencyIndex = target.getAttribute('data-competency-index')
+  var competencyState = target.classList[1]
 
-  var userId             = target.getAttribute('data-user-id')
-  var competencyPosition = target.getAttribute('data-competency-position')
-  var competencyState    = target.classList[1]
-
-  console.log("userId:", userId)
-  console.log("position:", competencyPosition)
-  console.log("state:", competencyState)
+  $.ajax({
+    url: '/competency_records',
+    type: 'PUT',
+    data: {
+      userId:          userId,
+      competencyName:  competencyName,
+      competencyIndex: competencyIndex,
+      competencyState: competencyState
+    }
+  })
 }
 
 var addOnClicks = function() {

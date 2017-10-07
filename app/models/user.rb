@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  serialize :record
+  serialize :competency_record
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -8,8 +8,8 @@ class User < ApplicationRecord
   before_create :populate_base_competency_record
 
   BASE_COMPETENCY_RECORD = {
-    'Javascript' => ['','','',''],
-    'Ruby'       => ['','','',''],
+    'Javascript' => ['completed','','',''],
+    'Ruby'       => ['working','','',''],
     'Java'       => ['','','',''],
     'React'      => ['','','',''],
     'DevOps'     => ['','','','']

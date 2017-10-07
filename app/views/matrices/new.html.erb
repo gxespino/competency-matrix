@@ -7,7 +7,7 @@
 
   <ul class="nav nav-tabs justify-content-end border-light border-bottom-0" id="myTab" role="tablist">
     <% @matrices.each do |matrix| %>
-      <li class="nav-item <%= 'active' if matrix.title == 'Javascript' %>">
+      <li class="nav-item <%= "active" if matrix.title == "Javascript" %>">
         <a class="nav-link"
            id="<%= matrix.title %>-tab"
            data-toggle="tab"
@@ -24,7 +24,7 @@
 
   <div class="tab-content p-4 border">
     <% @matrices.each do |matrix| %>
-      <div class="tab-pane fade show <%= 'active' if matrix.title == 'Javascript' %>" id="<%= matrix.title %>" role="tabpanel" aria-labelledby="<%= matrix.title %>-tab">
+      <div class="tab-pane fade show <%= "active" if matrix.title == "Javascript" %>" id="<%= matrix.title %>" role="tabpanel" aria-labelledby="<%= matrix.title %>-tab">
         <div class="row">
           <div class="col-lg-12 mx-auto">
             <table class="table">
@@ -57,7 +57,8 @@
                     <% competency.levels.each do |level| %>
                       <td class="competency <%= level[1] %>"
                           data-user-id=<%= current_user.id %>
-                          data-competency-position=<%= "#{matrix.title}-#{competency.title}-#{competency.levels.index(level)}" %>
+                          data-competency-name=<%= matrix.title %>
+                          data-competency-index=<%= competency.levels.index(level) %>
                           onclick="selectCompetency(event)">
                         <%= level[0].html_safe %>
                       </td>
