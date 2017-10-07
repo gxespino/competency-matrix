@@ -10,5 +10,8 @@ class MatricesController < ApplicationController
       react_matrix,
       devops_matrix
     ]
+
+    binding.pry
   end
 end
+
