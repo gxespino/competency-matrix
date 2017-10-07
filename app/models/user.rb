@@ -5,7 +5,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  after_create :populate_blank_competency_record
+  before_create :populate_base_competency_record
 
   BASE_COMPETENCY_RECORD = {
     'Javascript' => ['','','',''],
@@ -17,8 +17,7 @@ class User < ApplicationRecord
 
   private
 
-  def populate_blank_competency_record
-    competency_record = BASE_COMPETENCY_RECORD
-    save
+  def populate_base_competency_record
+    self.competency_record = BASE_COMPETENCY_RECORD
   end
 end
