@@ -8,8 +8,8 @@ class User < ApplicationRecord
   before_create :populate_base_competency_record
 
   BASE_COMPETENCY_RECORD = {
-    'Javascript' => ['completed','','',''],
-    'Ruby'       => ['working','','',''],
+    'Javascript' => ['','','',''],
+    'Ruby'       => ['','','',''],
     'Java'       => ['','','',''],
     'React'      => ['','','',''],
     'DevOps'     => ['','','','']
