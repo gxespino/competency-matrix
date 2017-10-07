@@ -3,7 +3,7 @@ class MatricesController < ApplicationController
   include MatrixDefinitions
 
   def new
-    @matrices = [
+    matrices = [
       javascript_matrix,
       ruby_matrix,
       java_matrix,
@@ -11,7 +11,10 @@ class MatricesController < ApplicationController
       devops_matrix
     ]
 
-    binding.pry
+    @matrices = DbMapper.new(
+      matrices: matrices,
+      competency_record: current_user.competency_record
+    ).matrices
   end
 end
 

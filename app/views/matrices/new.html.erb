@@ -55,11 +55,11 @@
                 <% matrix.competencies.each do |competency| %>
                   <tr>
                     <% competency.levels.each do |level| %>
-                      <td class="competency"
+                      <td class="competency <%= level[1] %>"
                           data-user-id=<%= current_user.id %>
                           data-competency-position=<%= "#{matrix.title}-#{competency.title}-#{competency.levels.index(level)}" %>
                           onclick="selectCompetency(event)">
-                        <%= level.html_safe %>
+                        <%= level[0].html_safe %>
                       </td>
                     <% end %>
                   </tr>
