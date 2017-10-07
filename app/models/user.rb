@@ -7,10 +7,18 @@ class User < ApplicationRecord
 
   after_create :populate_blank_competency_record
 
+  BASE_COMPETENCY_RECORD = {
+    'Javascript' => ['','','',''],
+    'Ruby'       => ['','','',''],
+    'Java'       => ['','','',''],
+    'React'      => ['','','',''],
+    'DevOps'     => ['','','','']
+  }.freeze
+
   private
 
   def populate_blank_competency_record
-    competency_record = "BASE RECORD"
+    competency_record = BASE_COMPETENCY_RECORD
     save
   end
 end

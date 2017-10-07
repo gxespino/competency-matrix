@@ -14,7 +14,7 @@ class MatricesController < ApplicationController
     @matrices = DbMapper.new(
       matrices: matrices,
       competency_record: current_user.competency_record
-    ).matrices
+    ).mapped_competency_record
   end
 end
 

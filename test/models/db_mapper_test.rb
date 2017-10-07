@@ -17,24 +17,22 @@ describe DbMapper do
     end
   end
 
-  describe '#map_user_competency_record!' do
+  describe '#mapped_competency_record!' do
     it 'returns an updated matrices array' do
       matrices = [
         javascript_matrix,
         ruby_matrix
       ]
       competency_record = {
-        "Javascript" => ['completed', 'completed', 'working', ''],
-        "Ruby"       => ['working', '', '', '']
+        'Javascript' => ['completed', 'completed', 'working', ''],
+        'Ruby'       => ['working', '', '', '']
       }
       mapper = DbMapper.new(
         matrices: matrices,
         competency_record: competency_record
       )
 
-      mapper.map_user_competency_record!
-
-      result = mapper.mapped_matrices
+      result = mapper.mapped_competency_record
 
       assert_equal 'completed', result.first.competencies.first.levels.first[1]
       assert_equal 'completed', result.first.competencies.first.levels[1][1]
