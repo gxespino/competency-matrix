@@ -17,6 +17,7 @@ function selectCompetency(event) {
   }
 
   setProgressBar(competency)
+  updateCompetencyRecord(competency)
 }
 
 function clearParentRow(competency) {

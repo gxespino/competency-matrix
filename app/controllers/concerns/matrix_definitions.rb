@@ -39,7 +39,12 @@ module MatrixDefinitions
   def overall
     Competency.new(
       title: 'Overall',
-      levels: [apprentice, competent, proficient, advanced]
+      levels: [
+        [apprentice, ''],
+        [competent,  ''],
+        [proficient, ''],
+        [advanced,   '']
+      ]
     )
   end
 

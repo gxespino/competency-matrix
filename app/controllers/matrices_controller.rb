@@ -3,12 +3,18 @@ class MatricesController < ApplicationController
   include MatrixDefinitions
 
   def new
-    @matrices = [
+    matrices = [
       javascript_matrix,
       ruby_matrix,
       java_matrix,
       react_matrix,
       devops_matrix
     ]
+
+    @matrices = DbMapper.new(
+      matrices: matrices,
+      competency_record: current_user.competency_record
+    ).mapped_competency_record
   end
 end
+
