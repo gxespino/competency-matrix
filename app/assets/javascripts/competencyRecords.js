@@ -16,13 +16,21 @@ function updateCompetencyRecord(target) {
   })
 }
 
-var addOnClicks = function() {
-  var checkboxes = document.getElementsByClassName('cbx');
+var loadProgressBars = function() {
+  var completed = document.getElementsByClassName('completed');
 
-  $.each(checkboxes, function(idx, checkbox) {
-    checkbox.onclick = triggerCheck
-  })
+  for (var i = 0, len = completed.length; i < len; i++) {
+    var competency = completed[i]
+    setProgressBar(competency)
+  }
+
+  var working = document.getElementsByClassName('working');
+
+  for (var i = 0, len = working.length; i < len; i++) {
+    var competency = working[i]
+    setProgressBar(competency)
+  }
 }
 
-$(document).ready(addOnClicks);
-$(document).on('page:load', addOnClicks);
+$(document).ready(loadProgressBars);
+$(document).on('page:load', loadProgressBars);
