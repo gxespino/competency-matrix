@@ -15,22 +15,3 @@ function updateCompetencyRecord(target) {
     }
   })
 }
-
-var loadProgressBars = function() {
-  var completed = document.getElementsByClassName('completed');
-
-  for (var i = 0, len = completed.length; i < len; i++) {
-    var competency = completed[i]
-    setProgressBar(competency)
-  }
-
-  var working = document.getElementsByClassName('working');
-
-  for (var i = 0, len = working.length; i < len; i++) {
-    var competency = working[i]
-    setProgressBar(competency)
-  }
-}
-
-$(document).ready(loadProgressBars);
-$(document).on('page:load', loadProgressBars);
