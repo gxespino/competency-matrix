@@ -10,9 +10,9 @@ function CompetencyRecord(competency) {
       type: 'PUT',
       data: {
         userId:          this.userId,
-        competencyName:  this.competencyName,
-        competencyIndex: this.competencyIndex,
-        competencyState: this.competencyState
+        competencyName:  this.name,
+        competencyIndex: this.index,
+        competencyState: this.state
       }
     })
   }
