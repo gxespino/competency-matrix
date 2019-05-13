@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3.1'
+ruby '2.5.3'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -22,7 +22,7 @@ gem 'bootstrap', '~> 4.0.0.beta'
 gem 'devise'
 
 group :development, :test do
-  gem 'sqlite3'
+  gem 'pg'
   gem 'minitest-rails'
   gem 'pry', platforms: [:mri, :mingw, :x64_mingw]
 end

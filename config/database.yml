@@ -7,16 +7,19 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  adapter: sqlite3
+  adapter: postgresql
+  database: competencymatrix_development
   pool: 5
-  timeout: 5000
-  database: db/development.sqlite3
+  host: localhost
+  username: postgres
 
 test:
-  adapter: sqlite3
+  adapter: postgresql
+  database: competencymatrix_test
   pool: 5
-  timeout: 5000
-  database: db/test.sqlite3
+  port: 5432
+  host: localhost
+  username: postgres
 
 production:
   <<: *default

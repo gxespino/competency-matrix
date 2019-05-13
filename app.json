@@ -5,5 +5,8 @@
          "heroku-postgresql"
       ]
     }
+  },
+  "scripts": {
+    "postdeploy": "bundle exec rake db:schema:load db:migrate db:seed"
   }
 }
