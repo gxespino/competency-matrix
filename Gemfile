@@ -22,7 +22,7 @@ gem 'bootstrap', '~> 4.0.0.beta'
 gem 'devise'
 
 group :development, :test do
-  gem 'sqlite3'
+  gem 'pg'
   gem 'minitest-rails'
   gem 'pry', platforms: [:mri, :mingw, :x64_mingw]
 end
