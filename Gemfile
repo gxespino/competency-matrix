@@ -16,7 +16,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 
 # Styles
-gem 'bootstrap', '~> 4.0.0.beta'
+gem 'bootstrap', '~> 4.3.1'
 
 # Authentication
 gem 'devise'
